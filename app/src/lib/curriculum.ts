@@ -51,8 +51,8 @@ export const modules: Module[] = [
       recommendation:
         "Standardize data contracts + reporting layer first, then phase consolidation by lowest switching-risk domains.",
       discussionQuestions: [
-        "Which stack elements are strategic vs replaceable?",
-        "What should be governed centrally vs embedded in squads?",
+        "It is your day-30 exec review. Do you consolidate tools now or standardize data contracts first, and why?",
+        "Name the one 90-day KPI that would prove your decision worked.",
       ],
     },
   },
@@ -88,8 +88,8 @@ export const modules: Module[] = [
       recommendation:
         "Enforce naming contract + QA gates first, then phase server-side migration for critical events.",
       discussionQuestions: [
-        "How much data quality is enough to make budget decisions?",
-        "Where do you place ownership for schema changes?",
+        "You launch in 7 days with conflicting event definitions. What do you ship now and what do you block?",
+        "Who has final authority over schema changes, and how will you enforce it?",
       ],
     },
   },
@@ -125,8 +125,8 @@ export const modules: Module[] = [
       recommendation:
         "Hybrid architecture with explicit contracts gives speed now and flexibility later.",
       discussionQuestions: [
-        "What lock-in risks are acceptable at current stage?",
-        "Which capabilities demand internal ownership?",
+        "Choose one architecture today: suite, composable, or hybrid. Defend your choice in one sentence.",
+        "Which lock-in risk are you willing to accept this year, and which is unacceptable?",
       ],
     },
   },
@@ -162,8 +162,8 @@ export const modules: Module[] = [
       recommendation:
         "Implement supply path optimization with quality floor, then selectively reintroduce scale inventory.",
       discussionQuestions: [
-        "How do you value quality vs scale?",
-        "Which transparency signals are non-negotiable?",
+        "CPA is up after exchange expansion. Do you cut volume now or keep spend while tightening supply paths?",
+        "State the hard quality threshold that would force an immediate budget shift.",
       ],
     },
   },
@@ -199,8 +199,8 @@ export const modules: Module[] = [
       recommendation:
         "Launch with consent mode + server-side critical events and model-based measurement fallback.",
       discussionQuestions: [
-        "What is the minimum viable compliant measurement?",
-        "How do you communicate modeled conversions to leadership?",
+        "Legal says consent controls must go live before launch. What is your minimum viable compliant measurement stack?",
+        "What performance loss will you explicitly accept to stay compliant in quarter one?",
       ],
     },
   },
@@ -236,8 +236,8 @@ export const modules: Module[] = [
       recommendation:
         "Run holdout tests and triangulate with MMM before major budget cuts.",
       discussionQuestions: [
-        "What confidence threshold triggers reallocation?",
-        "How often should measurement models be recalibrated?",
+        "ROAS and payback disagree. Which source governs budget this quarter, and why?",
+        "What is the first experiment you run to resolve the conflict, and what result changes spend?",
       ],
     },
   },
@@ -273,8 +273,8 @@ export const modules: Module[] = [
       recommendation:
         "Balanced approach with activation metrics as primary guardrail.",
       discussionQuestions: [
-        "Which activation moments are predictive of retention?",
-        "How do you avoid over-automation harming brand trust?",
+        "Trials are strong but activation is weak. Do you pause acquisition, maintain spend, or split the approach?",
+        "Which activation signal in the next 14 days determines whether your decision was right?",
       ],
     },
   },
@@ -310,8 +310,8 @@ export const modules: Module[] = [
       recommendation:
         "Keep volume, introduce strict hypothesis and promotion criteria.",
       discussionQuestions: [
-        "Which creative dimensions drive marginal gains?",
-        "How do you prevent model-generated sameness?",
+        "Volume is up 5x and CPA is worse. What do you cut first: channels, variants, or hypotheses?",
+        "Define the promotion rule a creative must meet before it gets scaled.",
       ],
     },
   },
@@ -347,8 +347,8 @@ export const modules: Module[] = [
       recommendation:
         "Capability-based consolidation with protected innovation budget.",
       discussionQuestions: [
-        "Which costs are growth-enabling vs waste?",
-        "How do you govern new tool adoption requests?",
+        "You must cut 30% tooling cost in two quarters. Which capabilities are protected from cuts and why?",
+        "Which vendor do you sunset first, and what decision criteria make that defensible to the board?",
       ],
     },
   },
@@ -384,8 +384,8 @@ export const modules: Module[] = [
       recommendation:
         "Dual-track execution with hard milestone gates and explicit risk control.",
       discussionQuestions: [
-        "What should happen in first 30/60/90 days?",
-        "How do you align finance and growth teams on success metrics?",
+        "You have 90 days as new CMO. What are your first three week-one decisions?",
+        "What KPI tree aligns finance and growth, and which node is reviewed weekly at exec level?",
       ],
     },
   },
