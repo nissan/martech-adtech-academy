@@ -40,7 +40,9 @@ test.describe("Academy core flows (BDD)", () => {
 
     // Then I should see a score and answer explanations
     await expect(page.getByText("Score:")).toBeVisible();
-    await expect(page.getByText("Without shared taxonomy and ownership, metrics fragment and decisions become unreliable.")).toBeVisible();
+    await expect(
+      page.getByText("Without shared taxonomy and ownership, metrics fragment and decisions become unreliable."),
+    ).toBeVisible();
   });
 
   test("Scenario: Learner saves and restores a case memo", async ({ page }) => {
@@ -58,7 +60,7 @@ test.describe("Academy core flows (BDD)", () => {
     await expect(page.locator("textarea.memoArea")).toHaveValue(marker);
   });
 
-  test("Scenario: Learner can complete onboarding and start module 1", async ({ page }) => {
+  test("Scenario: Learner can open onboarding from homepage CTA", async ({ page }) => {
     // Given I am on the academy homepage
     await page.goto("/");
 
@@ -69,6 +71,34 @@ test.describe("Academy core flows (BDD)", () => {
     await expect(page).toHaveURL(/\/onboarding$/);
     await expect(page.getByRole("heading", { name: "Module types and progression" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Why Harvard-style case studies accelerate learning" })).toBeVisible();
+    await page.getByRole("link", { name: "Start Module 1" }).click();
+    await expect(page).toHaveURL(/\/module\/industry-map$/);
+  });
+
+  test("Scenario: First-time learner sees onboarding prompt and can dismiss it", async ({ page }) => {
+    // Given I am on the academy homepage for the first time
+    await page.goto("/");
+    await expect(page.getByRole("heading", { name: "New learner recommended path" })).toBeVisible();
+
+    // When I dismiss the onboarding prompt
+    await page.getByRole("button", { name: "Skip for now" }).click();
+
+    // Then it should stay hidden after reload
+    await expect(page.getByRole("heading", { name: "New learner recommended path" })).toHaveCount(0);
+    await page.reload();
+    await expect(page.getByRole("heading", { name: "New learner recommended path" })).toHaveCount(0);
+  });
+
+  test("Scenario: Learner starts onboarding from the first-time prompt", async ({ page }) => {
+    // Given I am on the academy homepage for the first time
+    await page.goto("/");
+
+    // When I start guided onboarding
+    await page.getByRole("button", { name: "Start guided onboarding" }).click();
+
+    // Then I should land on onboarding and be able to start module 1
+    await expect(page).toHaveURL(/\/onboarding$/);
+    await expect(page.getByRole("heading", { name: "Module types and progression" })).toBeVisible();
     await page.getByRole("link", { name: "Start Module 1" }).click();
     await expect(page).toHaveURL(/\/module\/industry-map$/);
   });

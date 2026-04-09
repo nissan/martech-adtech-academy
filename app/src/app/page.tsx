@@ -1,4 +1,5 @@
 import { ModuleCard } from "@/components/ModuleCard";
+import { FirstTimeOnboardingPrompt } from "@/components/FirstTimeOnboardingPrompt";
 import { modules } from "@/lib/curriculum";
 import Link from "next/link";
 
@@ -14,6 +15,8 @@ export default function HomePage() {
           Structure used from Academy builds: module-first learning, guided routes, and measurable progress.
         </p>
       </header>
+
+      <FirstTimeOnboardingPrompt />
 
       <section className="panel" style={{ marginBottom: 16 }}>
         <p style={{ marginTop: 0 }}>
