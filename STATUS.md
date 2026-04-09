@@ -1,10 +1,10 @@
 # STATUS: MarTech + AdTech Academy
-_Last updated: 2026-04-09 13:42 AEST by Loki_
+_Last updated: 2026-04-09 13:45 AEST by Loki_
 
 ## 🔖 RESUME FROM HERE
-- **Next action:** Merge PR #4 after conflict resolution + final validation (Next.js 16.2.1 + first-time onboarding tracking)
+- **Next action:** Nissan review/merge PR #4 (conflicts resolved, branch force-updated, full validations passing)
 - **Waiting on:** Nissan PR approval, plus Vercel project visibility/auth for live URL smoke
-- **Last discussed:** Merge conflicts reported; branch rebased, resolved, and ready for final test confirmation
+- **Last discussed:** Merge conflicts resolved and post-rebase validations passed (`build` + `test:e2e` 7/7)
 
 ## 📍 Current Phase
 **Phase:** Phase 2 — Prototype Delivered (Research + Curriculum + App)  
@@ -20,6 +20,7 @@ _Last updated: 2026-04-09 13:42 AEST by Loki_
 - Repo: `https://github.com/nissan/martech-adtech-academy`
 
 ## 🧠 Key Decisions (immutable log)
+- 2026-04-09: Resolved PR #4 rebase conflicts against latest `main`; reran validations successfully (`pnpm -C app build`, `pnpm -C app test:e2e` 7/7)
 - 2026-04-09: Security patch applied: upgraded Next.js from 15.2.2 to 16.2.1 and revalidated build + BDD E2E before PR
 - 2026-04-09: Added first-time onboarding tracking (`localStorage`) with homepage onboarding prompt, dismiss/seen persistence, and `/onboarding` path; BDD suite expanded for first-run behavior
 - 2026-04-09: Added GitHub Actions CI gate (`academy-ci`) to enforce app build + BDD E2E on PR/main; updated README deploy flow
