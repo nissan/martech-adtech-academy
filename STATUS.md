@@ -2,9 +2,9 @@
 _Last updated: 2026-04-09 10:36 AEST by Loki_
 
 ## 🔖 RESUME FROM HERE
-- **Next action:** Authenticate Vercel or Fly (`vercel login` or `flyctl auth login`) to publish live preview URL
-- **Waiting on:** Nissan to run one-time platform login (tokens are currently invalid/missing)
-- **Last discussed:** Phase 2 complete: module quizzes + case memo workflow added and pushed
+- **Next action:** Review new real-company case modules in localhost and confirm if ready for Vercel deploy
+- **Waiting on:** Nissan confirmation + one-time deploy auth (`vercel login` preferred)
+- **Last discussed:** Real-world company case studies integrated across all modules and localhost smoke-tested
 
 ## 📍 Current Phase
 **Phase:** Phase 2 — Prototype Delivered (Research + Curriculum + App)  
@@ -20,6 +20,8 @@ _Last updated: 2026-04-09 10:36 AEST by Loki_
 - Repo: `https://github.com/reddinft/martech-adtech-academy`
 
 ## 🧠 Key Decisions (immutable log)
+- 2026-04-09: Added real-world case pack (`CASE_STUDIES.md`) and module-level real-company exercises (Booking.com, Airbnb, Netflix, HubSpot ecosystem, NYT/IAB standards, Snowplow, Amazon Ads)
+- 2026-04-09: Localhost smoke test completed (`pnpm dev` + route checks for `/`, `/module/industry-map`, `/module/measurement`)
 - 2026-04-09: Phase 2 shipped — added checkpoint quizzes and local case memo workspace with markdown export per module
 - 2026-04-09: Live deploy attempt blocked by missing/invalid CLI auth tokens (Vercel/Fly); app is build-verified locally
 - 2026-04-09: GitHub repo created `reddinft/martech-adtech-academy`; Nissan (`github.com/nissan`) invited as admin collaborator
@@ -29,8 +31,8 @@ _Last updated: 2026-04-09 10:36 AEST by Loki_
 - 2026-04-09: Delivery format chosen: Harvard-style case modules + standalone Next.js guided learning app
 
 ## ⚠️ Blockers & Flags
-- [ ] Deployment blocked: Vercel token invalid (`vercel --yes` failed)
-- [ ] Deployment blocked: Fly token missing (`flyctl auth whoami` failed)
+- [ ] Deployment blocked until auth is refreshed: Vercel token invalid (`vercel --yes` failed)
+- [ ] Optional fallback: Fly token missing (`flyctl auth whoami` failed)
 
 ## 📋 Agent Notes
 - **Loki:** Started project scaffold, research synthesis, curriculum architecture, and app build.
