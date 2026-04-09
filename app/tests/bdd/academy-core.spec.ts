@@ -57,4 +57,19 @@ test.describe("Academy core flows (BDD)", () => {
     await page.reload();
     await expect(page.locator("textarea.memoArea")).toHaveValue(marker);
   });
+
+  test("Scenario: Learner can complete onboarding and start module 1", async ({ page }) => {
+    // Given I am on the academy homepage
+    await page.goto("/");
+
+    // When I open onboarding
+    await page.getByRole("link", { name: "Start onboarding" }).click();
+
+    // Then I should see module types and a call to start module 1
+    await expect(page).toHaveURL(/\/onboarding$/);
+    await expect(page.getByRole("heading", { name: "Module types and progression" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Why Harvard-style case studies accelerate learning" })).toBeVisible();
+    await page.getByRole("link", { name: "Start Module 1" }).click();
+    await expect(page).toHaveURL(/\/module\/industry-map$/);
+  });
 });

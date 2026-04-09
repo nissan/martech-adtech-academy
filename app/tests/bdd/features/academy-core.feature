@@ -22,3 +22,8 @@ Feature: MarTech + AdTech Academy core learning flows
     Given I am on the industry map module page
     When I write and save a case memo
     Then the memo should persist after page reload
+
+  Scenario: Learner can complete onboarding and start module 1
+    Given I am on the academy homepage
+    When I open onboarding
+    Then I should see module types and a call to start module 1
