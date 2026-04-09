@@ -23,7 +23,17 @@ Feature: MarTech + AdTech Academy core learning flows
     When I write and save a case memo
     Then the memo should persist after page reload
 
-  Scenario: Learner can complete onboarding and start module 1
+  Scenario: Learner can open onboarding from homepage CTA
     Given I am on the academy homepage
     When I open onboarding
     Then I should see module types and a call to start module 1
+
+  Scenario: First-time learner sees onboarding prompt and can dismiss it
+    Given I am on the academy homepage for the first time
+    When I dismiss the onboarding prompt
+    Then it should stay hidden after reload
+
+  Scenario: Learner starts onboarding from the first-time prompt
+    Given I am on the academy homepage for the first time
+    When I start guided onboarding
+    Then I should land on onboarding and be able to start module 1

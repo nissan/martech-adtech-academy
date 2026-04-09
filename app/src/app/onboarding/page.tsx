@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { OnboardingSeenMarker } from "@/components/OnboardingSeenMarker";
 
 const moduleTypes = [
   {
@@ -40,6 +41,8 @@ const caseBenefits = [
 export default function OnboardingPage() {
   return (
     <main className="container">
+      <OnboardingSeenMarker />
+
       <header className="hero">
         <Link className="muted" href="/">
           ← Back to modules
