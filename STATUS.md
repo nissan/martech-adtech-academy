@@ -1,10 +1,10 @@
 # STATUS: MarTech + AdTech Academy
-_Last updated: 2026-04-09 17:14 AEST by Loki_
+_Last updated: 2026-04-10 06:51 AEST by Loki_
 
 ## 🔖 RESUME FROM HERE
-- **Next action:** Nissan review/merge PR #5 (Phase 1 UX refresh styling + flow polish), then proceed to Phase 2 interaction polish
-- **Waiting on:** Nissan PR approval, plus Vercel project visibility/auth for live URL smoke
-- **Last discussed:** Requested snappier design; implemented first UX refresh pass and revalidated full BDD suite
+- **Next action:** Open PR from `feat/full-module-content-expansion` now that E2E is green, then hand over for Nissan review.
+- **Waiting on:** Nissan PR review after PR is raised.
+- **Last discussed:** Expansion pass complete; Playwright E2E failures fixed; suite now 10/10 passing.
 
 ## 📍 Current Phase
 **Phase:** Phase 2 — Prototype Delivered (Research + Curriculum + App)  
@@ -20,6 +20,9 @@ _Last updated: 2026-04-09 17:14 AEST by Loki_
 - Repo: `https://github.com/nissan/martech-adtech-academy`
 
 ## 🧠 Key Decisions (immutable log)
+- 2026-04-10: Fixed the 2 failing Playwright tests by aligning BDD flows to current UI behavior (completion checkbox toggles into status state, quiz submit requires selected answers first). Local `pnpm -C app test:e2e` is now 10/10 passing.
+- 2026-04-10: Full 10-module content expansion landed on branch `feat/full-module-content-expansion` (curriculum, quizzes, real cases, rubric, BDD selector updates). Local build passes; E2E at 8/10 so PR is intentionally held until 2 failing tests are fixed.
+- 2026-04-09: Corrected scope drift: removed Solana video-augmentation work from MarTech app and moved implementation into dedicated `projects/solana-academy`.
 - 2026-04-09: Implemented Phase 1 UX refresh pass (design tokens, premium shell styling, hero/CTA hierarchy, onboarding banner polish, module card hierarchy, module step cues, quiz option affordances)
 - 2026-04-09: Resolved PR #4 rebase conflicts against latest `main`; reran validations successfully (`pnpm -C app build`, `pnpm -C app test:e2e` 7/7)
 - 2026-04-09: Security patch applied: upgraded Next.js from 15.2.2 to 16.2.1 and revalidated build + BDD E2E before PR
@@ -41,8 +44,9 @@ _Last updated: 2026-04-09 17:14 AEST by Loki_
 - 2026-04-09: Delivery format chosen: Harvard-style case modules + standalone Next.js guided learning app
 
 ## ⚠️ Blockers & Flags
+- [ ] PR not raised yet (tests now green; next step is opening PR from `feat/full-module-content-expansion`)
 - [ ] Deployment blocked until auth is refreshed: Vercel token invalid (`vercel --yes` failed)
 - [ ] Optional fallback: Fly token missing (`flyctl auth whoami` failed)
 
 ## 📋 Agent Notes
-- **Loki:** Started project scaffold, research synthesis, curriculum architecture, and app build.
+- **Loki:** Reverted accidental Solana-related MarTech changes; resumed clean MarTech project scope.
