@@ -1,5 +1,6 @@
 import { ModuleCard } from "@/components/ModuleCard";
 import { modules } from "@/lib/curriculum";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -15,6 +16,13 @@ export default function HomePage() {
       </header>
 
       <section className="panel" style={{ marginBottom: 16 }}>
+        <p style={{ marginTop: 0 }}>
+          <strong>New here?</strong> Start with the guided onboarding flow before Module 1.
+        </p>
+        <Link className="button" href="/onboarding">
+          Start onboarding
+        </Link>
+
         <strong>How to use this:</strong>
         <ol className="list" style={{ marginTop: 8 }}>
           <li>Read the theory section.</li>

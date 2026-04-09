@@ -1,10 +1,10 @@
 # STATUS: MarTech + AdTech Academy
-_Last updated: 2026-04-09 13:20 AEST by Loki_
+_Last updated: 2026-04-09 13:26 AEST by Loki_
 
 ## 🔖 RESUME FROM HERE
-- **Next action:** Open PR for CI quality gate + deploy workflow docs updates, then request Nissan review
+- **Next action:** Nissan review/merge PR #3 (onboarding flow), then run live URL smoke if Vercel URL/auth available
 - **Waiting on:** Nissan PR approval, plus Vercel project visibility/auth for live URL smoke
-- **Last discussed:** Continue building requested; added deployment-readiness hardening and revalidated tests
+- **Last discussed:** Continue building requested; onboarding flow added to improve first-run learner experience
 
 ## 📍 Current Phase
 **Phase:** Phase 2 — Prototype Delivered (Research + Curriculum + App)  
@@ -20,6 +20,7 @@ _Last updated: 2026-04-09 13:20 AEST by Loki_
 - Repo: `https://github.com/nissan/martech-adtech-academy`
 
 ## 🧠 Key Decisions (immutable log)
+- 2026-04-09: Added in-app onboarding flow (`/onboarding`) explaining module progression and Harvard case-study learning model; expanded BDD suite to include onboarding path
 - 2026-04-09: Added GitHub Actions CI gate (`academy-ci`) to enforce app build + BDD E2E on PR/main; updated README deploy flow
 - 2026-04-09: PR #1 merged to `main`; post-merge local smoke passed (`pnpm -C app build` + `pnpm -C app test:e2e` 4/4)
 - 2026-04-09: Added BDD deployment gate with Playwright E2E (feature + executable scenarios) and opened PR #1 for review
